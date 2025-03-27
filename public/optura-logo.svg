@@ -1,46 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Circuit Background -->
-  <g transform="translate(10, 10) scale(0.833)">
-    <!-- Outer Circuit Ring -->
-    <path d="M60 0 A60 60 0 1 1 60 120 A60 60 0 1 1 60 0" 
-          stroke="#00ffea" stroke-width="2" fill="none"/>
-    
-    <!-- Inner Circuit Elements -->
-    <path d="M30 60 L10 60 M90 60 L110 60" 
-          stroke="#00ffea" stroke-width="2"/>
-    <path d="M60 30 L60 10 M60 90 L60 110" 
-          stroke="#00ffea" stroke-width="2"/>
-    
-    <!-- Circuit Dots -->
-    <circle cx="10" cy="60" r="3" fill="#00ffea"/>
-    <circle cx="110" cy="60" r="3" fill="#00ffea"/>
-    <circle cx="60" cy="10" r="3" fill="#00ffea"/>
-    <circle cx="60" cy="110" r="3" fill="#00ffea"/>
-    
-    <!-- Circuit Lines -->
-    <path d="M85 85 L100 100 M35 85 L20 100 M85 35 L100 20 M35 35 L20 20" 
-          stroke="#00ffea" stroke-width="2"/>
-    
-    <!-- People Icon in Center -->
-    <circle cx="60" cy="60" r="30" fill="#1a1a1a"/>
-    <path d="M45 55 A5 5 0 1 0 45 55 M60 55 A5 5 0 1 0 60 55 M75 55 A5 5 0 1 0 75 55" 
-          fill="#00ffea"/>
-    <path d="M40 70 Q60 85 80 70" 
-          stroke="#00ffea" stroke-width="2" fill="none"/>
-    
-    <!-- Additional Circuit Elements -->
-    <path d="M10 30 Q30 30 30 50 M110 30 Q90 30 90 50" 
-          stroke="#00ffea" stroke-width="2" fill="none"/>
-    <path d="M10 90 Q30 90 30 70 M110 90 Q90 90 90 70" 
-          stroke="#00ffea" stroke-width="2" fill="none"/>
-  </g>
+<svg width="240" height="144" viewBox="0 0 240 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scanner Frame -->
+  <path d="M24 12 L12 12 Q6 12 6 18 L6 30" stroke="#0066B3" stroke-width="3"/>
+  <path d="M216 12 L228 12 Q234 12 234 18 L234 30" stroke="#0066B3" stroke-width="3"/>
+  <path d="M24 132 L12 132 Q6 132 6 126 L6 114" stroke="#0066B3" stroke-width="3"/>
+  <path d="M216 132 L228 132 Q234 132 234 126 L234 114" stroke="#0066B3" stroke-width="3"/>
+  
+  <!-- Scanner Lines -->
+  <rect x="36" y="12" width="5" height="18" rx="1" fill="#0066B3"/>
+  <rect x="199" y="12" width="5" height="18" rx="1" fill="#0066B3"/>
+  <rect x="36" y="114" width="5" height="18" rx="1" fill="#0066B3"/>
+  <rect x="199" y="114" width="5" height="18" rx="1" fill="#0066B3"/>
+  
+  <!-- Circle with People Icon -->
+  <circle cx="120" cy="54" r="30" fill="#0066B3"/>
+  <path d="M108 54 A6 6 0 1 0 108 54 M132 54 A6 6 0 1 0 132 54 M120 54 A6 6 0 1 0 120 54" fill="white"/>
+  <path d="M102 66 Q120 78 138 66" stroke="white" stroke-width="2.4" fill="none"/>
   
   <!-- OPTURA Text -->
-  <text x="180" y="70" 
-        font-family="Arial, sans-serif" 
-        font-size="48" 
-        font-weight="bold" 
-        fill="#000000" 
-        letter-spacing="2">OPTURA</text>
+  <text x="120" y="120" font-family="Arial, sans-serif" font-size="29" font-weight="bold" text-anchor="middle" fill="#0066B3">optura</text>
+  
+  <!-- Registered Trademark -->
+  <text x="222" y="102" font-family="Arial, sans-serif" font-size="10" fill="#0066B3">®</text>
 </svg> 
