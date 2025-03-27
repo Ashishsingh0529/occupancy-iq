@@ -120,10 +120,10 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="solutions" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section id="solutions" className="w-full py-16 md:py-24 lg:py-32 bg-white">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+            <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
+              <div className="space-y-3">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Solutions
                 </div>
@@ -135,18 +135,18 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-8 py-12 lg:grid-cols-2">
-              <div id="people-counting" className="rounded-xl border bg-background p-6 shadow-sm">
-                <div className="flex items-center gap-4">
+            <div className="mx-auto grid max-w-5xl gap-6 sm:gap-8 py-8 lg:grid-cols-2">
+              <div id="people-counting" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">People Counting Solution</h3>
                 </div>
-                <p className="mt-3 text-muted-foreground">
+                <p className="text-muted-foreground mb-6">
                   Accurate and real-time people counting technology to track foot traffic and occupancy levels across your facilities.
                 </p>
-                <ul className="mt-4 grid gap-2">
+                <ul className="grid gap-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Real-time counting accuracy</span>
@@ -161,17 +161,17 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <div id="occupancy" className="rounded-xl border bg-background p-6 shadow-sm">
-                <div className="flex items-center gap-4">
+              <div id="occupancy" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
                     <Building2 className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">Occupancy Solution</h3>
                 </div>
-                <p className="mt-3 text-muted-foreground">
+                <p className="text-muted-foreground mb-6">
                   Comprehensive occupancy management system to optimize space utilization and ensure compliance with capacity limits.
                 </p>
-                <ul className="mt-4 grid gap-2">
+                <ul className="grid gap-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Capacity monitoring</span>
@@ -186,18 +186,18 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <div id="corporate" className="rounded-xl border bg-background p-6 shadow-sm">
-                <div className="flex items-center gap-4">
+              <div id="corporate" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
                     <Building className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">Corporate Offices</h3>
                 </div>
-                <p className="mt-3 text-muted-foreground">
+                <p className="text-muted-foreground mb-6">
                   Optimize workspace utilization, manage meeting room occupancy, and support hybrid work models with
                   real-time occupancy data.
                 </p>
-                <ul className="mt-4 grid gap-2">
+                <ul className="grid gap-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Workspace optimization</span>
@@ -212,18 +212,18 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <div id="retail" className="rounded-xl border bg-background p-6 shadow-sm">
-                <div className="flex items-center gap-4">
+              <div id="retail" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
                     <ShoppingBag className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">Retail & Shopping</h3>
                 </div>
-                <p className="mt-3 text-muted-foreground">
+                <p className="text-muted-foreground mb-6">
                   Enhance customer experience and optimize store operations with real-time foot traffic analytics and
                   occupancy monitoring.
                 </p>
-                <ul className="mt-4 grid gap-2">
+                <ul className="grid gap-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Customer flow analysis</span>
@@ -238,18 +238,18 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <div id="healthcare" className="rounded-xl border bg-background p-6 shadow-sm">
-                <div className="flex items-center gap-4">
+              <div id="healthcare" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
                     <Stethoscope className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">Healthcare</h3>
                 </div>
-                <p className="mt-3 text-muted-foreground">
+                <p className="text-muted-foreground mb-6">
                   Manage patient flow, optimize waiting areas, and ensure compliance with healthcare facility
                   occupancy requirements.
                 </p>
-                <ul className="mt-4 grid gap-2">
+                <ul className="grid gap-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Patient flow tracking</span>
@@ -264,18 +264,18 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <div id="education" className="rounded-xl border bg-background p-6 shadow-sm">
-                <div className="flex items-center gap-4">
+              <div id="education" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
                     <GraduationCap className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">Education</h3>
                 </div>
-                <p className="mt-3 text-muted-foreground">
-                  Monitor classroom occupancy, manage campus facilities, and ensure optimal learning environments
-                  with real-time data.
+                <p className="text-muted-foreground mb-6">
+                  Monitor classroom occupancy, manage campus facilities, and ensure optimal learning environments with
+                  real-time data.
                 </p>
-                <ul className="mt-4 grid gap-2">
+                <ul className="grid gap-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Classroom monitoring</span>
