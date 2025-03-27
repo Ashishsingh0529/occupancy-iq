@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle -->
-  <circle cx="20" cy="20" r="18" fill="#2563EB" opacity="0.1"/>
+<svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scanner Frame -->
+  <path d="M20 10 L10 10 Q5 10 5 15 L5 25" stroke="#0066B3" stroke-width="3"/>
+  <path d="M180 10 L190 10 Q195 10 195 15 L195 25" stroke="#0066B3" stroke-width="3"/>
+  <path d="M20 110 L10 110 Q5 110 5 105 L5 95" stroke="#0066B3" stroke-width="3"/>
+  <path d="M180 110 L190 110 Q195 110 195 105 L195 95" stroke="#0066B3" stroke-width="3"/>
   
-  <!-- Letter O -->
-  <path d="M20 8C13.3726 8 8 13.3726 8 20C8 26.6274 13.3726 32 20 32C26.6274 32 32 26.6274 32 20C32 13.3726 26.6274 8 20 8ZM20 30C14.4772 30 10 25.5228 10 20C10 14.4772 14.4772 10 20 10C25.5228 10 30 14.4772 30 20C30 25.5228 25.5228 30 20 30Z" fill="#2563EB"/>
+  <!-- Scanner Lines -->
+  <rect x="30" y="10" width="4" height="15" rx="1" fill="#0066B3"/>
+  <rect x="166" y="10" width="4" height="15" rx="1" fill="#0066B3"/>
+  <rect x="30" y="95" width="4" height="15" rx="1" fill="#0066B3"/>
+  <rect x="166" y="95" width="4" height="15" rx="1" fill="#0066B3"/>
   
-  <!-- Letter P -->
-  <path d="M40 8H48V20H52C55.3137 20 58 17.3137 58 14C58 10.6863 55.3137 8 52 8H40ZM48 18V10H52C53.1046 10 54 10.8954 54 12C54 13.1046 53.1046 14 52 14H48V18Z" fill="#2563EB"/>
+  <!-- Circle with People Icon -->
+  <circle cx="100" cy="45" r="25" fill="#0066B3"/>
+  <path d="M90 45 A5 5 0 1 0 90 45 M110 45 A5 5 0 1 0 110 45 M100 45 A5 5 0 1 0 100 45" fill="white"/>
+  <path d="M85 55 Q100 65 115 55" stroke="white" stroke-width="2" fill="none"/>
   
-  <!-- Letter T -->
-  <path d="M60 8H68V12H64V32H56V12H52V8H60Z" fill="#2563EB"/>
+  <!-- OPTURA Text -->
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#0066B3">optura</text>
   
-  <!-- Letter U -->
-  <path d="M70 8H78V24C78 27.3137 75.3137 30 72 30H68C64.6863 30 62 27.3137 62 24V8H70V24C70 25.1046 70.8954 26 72 26H76C77.1046 26 78 25.1046 78 24V8Z" fill="#2563EB"/>
-  
-  <!-- Letter R -->
-  <path d="M80 8H88V20H92C95.3137 20 98 17.3137 98 14C98 10.6863 95.3137 8 92 8H80ZM88 18V10H92C93.1046 10 94 10.8954 94 12C94 13.1046 93.1046 14 92 14H88V18Z" fill="#2563EB"/>
-  
-  <!-- Letter A -->
-  <path d="M100 32L94 8H102L108 32H100ZM96 24H100L98 16L96 24Z" fill="#2563EB"/>
+  <!-- Registered Trademark -->
+  <text x="185" y="85" font-family="Arial, sans-serif" font-size="8" fill="#0066B3">®</text>
 </svg> 

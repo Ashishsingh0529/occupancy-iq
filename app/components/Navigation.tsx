@@ -84,13 +84,14 @@ export function Navigation() {
       className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm"
     >
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center">
           <Image
             src="/optura-logo.svg"
             alt="OPTURA Logo"
             width={120}
             height={40}
-            className="h-8 w-auto"
+            className="h-10 w-auto"
+            priority
           />
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
