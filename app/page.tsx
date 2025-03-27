@@ -128,23 +128,23 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="solutions" className="w-full py-16 md:py-24 lg:py-32 bg-white">
-          <div className="container px-4 md:px-6">
+        <section id="solutions" className="w-full py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+          <div className="container px-4 sm:px-6 md:px-8">
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeIn}
-              className="flex flex-col items-center justify-center space-y-6 text-center mb-12"
+              className="flex flex-col items-center justify-center space-y-4 sm:space-y-6 text-center mb-8 sm:mb-12 md:mb-16"
             >
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Solutions
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
                   Solutions for Every Occupancy Need
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] text-muted-foreground text-sm sm:text-base md:text-lg">
                   Discover how our solutions can help you manage occupancy effectively.
                 </p>
               </div>
@@ -154,158 +154,158 @@ export default function Page() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="mx-auto grid max-w-5xl gap-6 sm:gap-8 py-8 lg:grid-cols-2"
+              className="mx-auto grid gap-4 sm:gap-6 md:gap-8 py-4 sm:py-6 md:py-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3"
             >
-              <div id="people-counting" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <Users className="h-6 w-6 text-primary" />
+              <div id="people-counting" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                    <Users className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">People Counting Solution</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold">People Counting Solution</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
                   Accurate and real-time people counting technology to track foot traffic and occupancy levels across your facilities.
                 </p>
-                <ul className="grid gap-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                <ul className="grid gap-2 sm:gap-3">
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Real-time counting accuracy</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Multiple counting zones</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Historical data analysis</span>
                   </li>
                 </ul>
               </div>
-              <div id="occupancy" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <Building2 className="h-6 w-6 text-primary" />
+              <div id="occupancy" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                    <Building2 className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">Occupancy Solution</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Occupancy Solution</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
                   Comprehensive occupancy management system to optimize space utilization and ensure compliance with capacity limits.
                 </p>
-                <ul className="grid gap-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                <ul className="grid gap-2 sm:gap-3">
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Capacity monitoring</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Automated alerts</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Compliance reporting</span>
                   </li>
                 </ul>
               </div>
-              <div id="corporate" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <Building className="h-6 w-6 text-primary" />
+              <div id="corporate" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                    <Building className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">Corporate Offices</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Corporate Offices</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
                   Optimize workspace utilization, manage meeting room occupancy, and support hybrid work models with
                   real-time occupancy data.
                 </p>
-                <ul className="grid gap-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                <ul className="grid gap-2 sm:gap-3">
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Workspace optimization</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Meeting room management</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Hybrid work support</span>
                   </li>
                 </ul>
               </div>
-              <div id="retail" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <ShoppingBag className="h-6 w-6 text-primary" />
+              <div id="retail" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                    <ShoppingBag className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">Retail & Shopping</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Retail & Shopping</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
                   Enhance customer experience and optimize store operations with real-time foot traffic analytics and
                   occupancy monitoring.
                 </p>
-                <ul className="grid gap-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                <ul className="grid gap-2 sm:gap-3">
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Customer flow analysis</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Store optimization</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Queue management</span>
                   </li>
                 </ul>
               </div>
-              <div id="healthcare" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <Stethoscope className="h-6 w-6 text-primary" />
+              <div id="healthcare" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                    <Stethoscope className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">Healthcare</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Healthcare</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
                   Manage patient flow, optimize waiting areas, and ensure compliance with healthcare facility
                   occupancy requirements.
                 </p>
-                <ul className="grid gap-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                <ul className="grid gap-2 sm:gap-3">
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Patient flow tracking</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Waiting area optimization</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Healthcare compliance</span>
                   </li>
                 </ul>
               </div>
-              <div id="education" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <GraduationCap className="h-6 w-6 text-primary" />
+              <div id="education" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
+                    <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">Education</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Education</h3>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
                   Monitor classroom occupancy, manage campus facilities, and ensure optimal learning environments with
                   real-time data.
                 </p>
-                <ul className="grid gap-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                <ul className="grid gap-2 sm:gap-3">
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Classroom monitoring</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Campus facility management</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-sm sm:text-base">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                     <span>Learning environment optimization</span>
                   </li>
                 </ul>
