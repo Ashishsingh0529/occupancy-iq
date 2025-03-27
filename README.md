@@ -1,77 +1,45 @@
-# OPTURA - Intelligent Occupancy Management System
+# Elevator Occupancy Management System
 
-A modern web application for intelligent people counting and occupancy management. Built with Next.js, TypeScript, and Tailwind CSS.
+A real-time system for monitoring and managing elevator occupancy.
 
 ## Features
 
-- Real-time people counting
-- Occupancy monitoring
-- Analytics dashboard
-- Multiple industry solutions
-- Responsive design
-- Modern UI/UX
+- Real-time elevator occupancy monitoring
+- User authentication and authorization
+- Historical data analysis
+- Occupancy alerts and notifications
 
-## Tech Stack
+## Setup
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Radix UI
-- Lucide Icons
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
+1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/occupancy-iq.git
-cd occupancy-iq
+git clone https://github.com/your-username/elevator-occupancy-management.git
 ```
 
-2. Install dependencies:
+2. Install dependencies
 ```bash
-npm install
-# or
-yarn install
+npm run install-all
 ```
 
-3. Run the development server:
+3. Set up environment variables
+- Copy `.env.example` to `.env`
+- Update the variables as needed
+
+4. Start the application
 ```bash
-npm run dev
-# or
-yarn dev
+npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology Stack
 
-## Project Structure
-
-```
-occupancy-iq/
-├── app/
-│   ├── components/
-│   ├── demo/
-│   └── page.tsx
-├── components/
-├── lib/
-├── public/
-└── styles/
-```
+- Frontend: React.js
+- Backend: Node.js, Express
+- Database: PostgreSQL
+- Authentication: JWT
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
@@ -81,4 +49,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
 
-Project Link: [https://github.com/yourusername/occupancy-iq](https://github.com/yourusername/occupancy-iq)
+Project Link: [https://github.com/yourusername/elevator-occupancy-management](https://github.com/yourusername/elevator-occupancy-management)
