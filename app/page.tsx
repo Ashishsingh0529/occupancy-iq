@@ -6,6 +6,7 @@ import {
   BarChart3,
 } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "./components/ContactForm"
@@ -30,84 +31,104 @@ export default function Page() {
     <div className="flex flex-col min-h-screen bg-white">
       <Navigation />
       <main className="flex-1">
-        <section className={`w-full py-16 md:py-24 lg:py-32 bg-white`}>
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <div className="container relative z-10 px-4 sm:px-6 md:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div 
                 initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
+                animate="visible"
                 variants={fadeIn}
-                className="space-y-6"
+                className="text-center lg:text-left"
               >
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gradient">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-6"
+                >
+                  Welcome to OPTURA
+                </motion.div>
+                <motion.h1 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6"
+                >
                   Intelligent People Counting & Occupancy Management
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Empower your business with real-time occupancy data and analytics. Make informed decisions, optimize
-                  space utilization, and enhance operational efficiency.
-                </p>
-                <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                  <Button 
-                    size="lg" 
-                    className="bg-primary/20 hover:bg-primary/30 transition-all duration-300 shadow-lg cursor-not-allowed"
-                    disabled
-                  >
-                    Dashboard Demo (Coming Soon)
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                </motion.h1>
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
+                >
+                  Optimize your space utilization with real-time occupancy data and advanced analytics. Make data-driven decisions for better resource management.
+                </motion.p>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                >
                   <Link href="/demo">
-                    <Button 
-                      size="lg" 
-                      className="bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-primary/30 hover:-translate-y-1"
-                    >
-                      Request a Demo
+                    <Button size="lg" className="w-full sm:w-auto">
+                      Request Demo
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                </div>
+                  <Link href="#contact">
+                    <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                      Contact Sales
+                    </Button>
+                  </Link>
+                </motion.div>
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="mx-auto lg:ml-auto flex w-full max-w-[600px] h-[400px] items-center justify-center rounded-xl bg-muted/50 backdrop-blur-sm p-4 shadow-xl"
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6 }}
+                className="relative"
               >
-                <div className="w-full h-full rounded-lg bg-background/80 flex items-center justify-center overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background/80" />
-                  <div className="relative w-full h-full">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10" />
-                    <div className="absolute inset-0 bg-[url('/dashboard-preview.svg')] bg-cover bg-center opacity-90" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        <motion.div
-                          animate={{ 
-                            y: [0, -10, 0],
-                            opacity: [0.5, 1, 0.5]
-                          }}
-                          transition={{ 
-                            repeat: Infinity, 
-                            duration: 3,
-                            ease: "easeInOut" 
-                          }}
-                        >
-                          <BarChart3 className="mx-auto h-16 w-16 text-primary" />
-                        </motion.div>
-                        <p className="text-sm text-muted-foreground">Interactive dashboard visualization</p>
-                      </div>
+                <div className="relative max-w-[600px] mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 rounded-2xl blur-3xl"></div>
+                  <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <Image
+                      src="/dashboard-preview.svg"
+                      alt="OPTURA Dashboard Preview"
+                      width={600}
+                      height={400}
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/20 to-transparent p-4">
+                      <p className="text-white text-sm">Interactive dashboard visualization</p>
                     </div>
                   </div>
+                  <motion.div
+                    animate={{
+                      y: [0, -10, 0],
+                      rotate: [0, 5, -5, 0]
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute -top-4 -right-4 bg-primary text-primary-foreground p-2 rounded-lg shadow-lg"
+                  >
+                    <BarChart3 className="h-6 w-6" />
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
+        {/* Features Section */}
         <section 
           id="features" 
-          className="scroll-mt-20 py-16"
+          className="scroll-mt-20 py-20 bg-gradient-to-b from-background to-primary/5"
         >
           <div className="container px-4 sm:px-6 md:px-8">
             <motion.div 
