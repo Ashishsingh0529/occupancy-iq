@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { Loader2 } from "lucide-react"
 
 type FormData = {
   company: string
@@ -123,6 +124,7 @@ export function ContactForm() {
           } bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
           placeholder="Enter your company name"
           required
+          disabled={isSubmitting}
           aria-invalid={!!errors.company}
           aria-describedby={errors.company ? "company-error" : undefined}
         />
@@ -144,9 +146,10 @@ export function ContactForm() {
           onChange={handleChange}
           className={`flex h-10 w-full rounded-md border ${
             errors.email ? 'border-red-500' : 'border-input'
-          } bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
+          } bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
           placeholder="Enter your email"
           required
+          disabled={isSubmitting}
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? "email-error" : undefined}
         />
@@ -165,8 +168,9 @@ export function ContactForm() {
           onChange={handleChange}
           className={`flex h-10 w-full rounded-md border ${
             errors.phone ? 'border-red-500' : 'border-input'
-          } bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
+          } bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
           placeholder="Enter your phone number"
+          disabled={isSubmitting}
           aria-invalid={!!errors.phone}
           aria-describedby={errors.phone ? "phone-error" : undefined}
         />
@@ -187,9 +191,10 @@ export function ContactForm() {
           onChange={handleChange}
           className={`flex min-h-[100px] w-full rounded-md border ${
             errors.message ? 'border-red-500' : 'border-input'
-          } bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
+          } bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
           placeholder="Tell us about your requirements"
           required
+          disabled={isSubmitting}
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "message-error" : undefined}
         />
@@ -199,33 +204,34 @@ export function ContactForm() {
           </p>
         )}
       </div>
-      {submitStatus === "success" && (
-        <div className="text-sm text-green-600 bg-green-50 p-3 rounded-md" role="alert">
-          Thank you for your inquiry! We'll get back to you soon.
-        </div>
-      )}
-      {submitStatus === "error" && (
-        <div className="text-sm text-red-600 bg-red-50 p-3 rounded-md" role="alert">
-          Something went wrong. Please try again later.
-        </div>
-      )}
       <Button 
         type="submit" 
-        size="lg"
         disabled={isSubmitting}
-        className="bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-primary/30 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed relative"
+        className="w-full"
       >
         {isSubmitting ? (
           <>
-            <span className="opacity-0">Submit Inquiry</span>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            </div>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Submitting...
           </>
+        ) : submitStatus === "success" ? (
+          "Message Sent!"
+        ) : submitStatus === "error" ? (
+          "Error - Try Again"
         ) : (
           "Submit Inquiry"
         )}
       </Button>
+      {submitStatus === "success" && (
+        <p className="text-sm text-green-600 text-center" role="alert">
+          Thank you for your message. We'll get back to you soon!
+        </p>
+      )}
+      {submitStatus === "error" && (
+        <p className="text-sm text-red-500 text-center" role="alert">
+          There was an error sending your message. Please try again.
+        </p>
+      )}
     </motion.form>
   )
 }

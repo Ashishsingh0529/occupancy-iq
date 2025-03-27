@@ -24,7 +24,14 @@ import { Navigation } from "./components/Navigation"
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.6,
+      ease: "easeOut"
+    } 
+  }
 }
 
 const staggerContainer = {
@@ -32,7 +39,8 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.2,
+      delayChildren: 0.1
     }
   }
 }
@@ -51,7 +59,7 @@ export default function Page() {
               <motion.div 
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 variants={fadeIn}
                 className="space-y-4"
               >
@@ -85,8 +93,8 @@ export default function Page() {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="mx-auto lg:ml-auto flex w-full max-w-[600px] h-[400px] items-center justify-center rounded-xl bg-muted/50 backdrop-blur-sm p-4 shadow-xl"
               >
                 <div className="w-full h-full rounded-lg bg-background/80 flex items-center justify-center overflow-hidden relative">
@@ -122,7 +130,13 @@ export default function Page() {
 
         <section id="solutions" className="w-full py-16 md:py-24 lg:py-32 bg-white">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12"
+            >
               <div className="space-y-3">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Solutions
@@ -134,8 +148,14 @@ export default function Page() {
                   Discover how our solutions can help you manage occupancy effectively.
                 </p>
               </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 sm:gap-8 py-8 lg:grid-cols-2">
+            </motion.div>
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="mx-auto grid max-w-5xl gap-6 sm:gap-8 py-8 lg:grid-cols-2"
+            >
               <div id="people-counting" className="rounded-xl border bg-background p-8 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="rounded-full bg-primary/10 p-3">
@@ -290,13 +310,19 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-4 text-center"
+            >
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Contact Us
@@ -306,12 +332,12 @@ export default function Page() {
                   Get in touch with our team to schedule a personalized demo and consultation.
                 </p>
               </div>
-            </div>
+            </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
               className="mx-auto max-w-lg py-12"
             >
               <ContactForm />
