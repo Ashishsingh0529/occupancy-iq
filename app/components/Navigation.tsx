@@ -84,7 +84,7 @@ export function Navigation() {
     >
       <Link className="flex items-center justify-center" href="/">
         <Building2 className="h-6 w-6 text-primary" />
-        <span className="ml-2 text-xl font-bold">OccupancyIQ</span>
+        <span className="ml-2 text-xl font-bold">OPTURA</span>
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">

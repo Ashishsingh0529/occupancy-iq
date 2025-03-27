@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "OccupancyIQ - Intelligent People Counting & Occupancy Management",
+  title: "OPTURA - Intelligent People Counting & Occupancy Management",
   description: "Empower your business with real-time occupancy data and analytics. Make informed decisions, optimize space utilization, and enhance operational efficiency.",
 };
 

@@ -1,4 +1,4 @@
-# OccupancyIQ - Intelligent Occupancy Management System
+# OPTURA - Intelligent Occupancy Management System
 
 A modern web application for intelligent people counting and occupancy management. Built with Next.js, TypeScript, and Tailwind CSS.
 
