@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 5rem; /* Accounts for fixed header and adds some breathing room */
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

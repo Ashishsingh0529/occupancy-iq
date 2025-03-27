@@ -105,7 +105,10 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="solutions" className="w-full py-16 md:py-24 lg:py-32 bg-white">
+        <section 
+          id="features" 
+          className="scroll-mt-20 py-16"
+        >
           <div className="container px-4 sm:px-6 md:px-8">
             <motion.div 
               initial="hidden"
@@ -116,13 +119,13 @@ export default function Page() {
             >
               <div className="space-y-4">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
-                  Solutions
+                  Features
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
-                  Solutions for Every Occupancy Need
+                  Features of Our Solution
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
-                  Discover how our solutions can help you manage occupancy effectively.
+                  Discover the key features of our intelligent people counting and occupancy management solution.
                 </p>
               </div>
             </motion.div>
@@ -130,7 +133,178 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-white">
+        <section 
+          id="people-counting" 
+          className="scroll-mt-20 py-16"
+        >
+          <div className="container px-4 sm:px-6 md:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
+            >
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  People Counting
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Accurate People Counting
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
+                  Learn about our advanced people counting technology and its benefits.
+                </p>
+              </div>
+            </motion.div>
+            <DynamicContent />
+          </div>
+        </section>
+
+        <section 
+          id="occupancy" 
+          className="scroll-mt-20 py-16"
+        >
+          <div className="container px-4 sm:px-6 md:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
+            >
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Occupancy Management
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Effective Occupancy Management
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
+                  Discover how our solution can help you manage occupancy effectively.
+                </p>
+              </div>
+            </motion.div>
+            <DynamicContent />
+          </div>
+        </section>
+
+        <section 
+          id="corporate" 
+          className="scroll-mt-20 py-16"
+        >
+          <div className="container px-4 sm:px-6 md:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
+            >
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Corporate
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Corporate Solutions
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
+                  Learn about our corporate solutions for managing occupancy effectively.
+                </p>
+              </div>
+            </motion.div>
+            <DynamicContent />
+          </div>
+        </section>
+
+        <section 
+          id="retail" 
+          className="scroll-mt-20 py-16"
+        >
+          <div className="container px-4 sm:px-6 md:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
+            >
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Retail
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Retail Solutions
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
+                  Discover how our retail solutions can help you manage occupancy effectively.
+                </p>
+              </div>
+            </motion.div>
+            <DynamicContent />
+          </div>
+        </section>
+
+        <section 
+          id="healthcare" 
+          className="scroll-mt-20 py-16"
+        >
+          <div className="container px-4 sm:px-6 md:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
+            >
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Healthcare
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Healthcare Solutions
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
+                  Learn about our healthcare solutions for managing occupancy effectively.
+                </p>
+              </div>
+            </motion.div>
+            <DynamicContent />
+          </div>
+        </section>
+
+        <section 
+          id="education" 
+          className="scroll-mt-20 py-16"
+        >
+          <div className="container px-4 sm:px-6 md:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
+            >
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Education
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Education Solutions
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
+                  Discover how our education solutions can help you manage occupancy effectively.
+                </p>
+              </div>
+            </motion.div>
+            <DynamicContent />
+          </div>
+        </section>
+
+        <section 
+          id="contact" 
+          className="scroll-mt-20 py-16"
+        >
           <div className="container px-4 md:px-6">
             <motion.div 
               initial="hidden"
