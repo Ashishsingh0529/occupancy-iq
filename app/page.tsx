@@ -4,22 +4,13 @@ import Link from "next/link"
 import {
   ArrowRight,
   BarChart3,
-  Building2,
-  CheckCircle,
-  Users,
-  Plane,
-  Building,
-  GraduationCap,
-  Stethoscope,
-  ShoppingBag,
 } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Progress } from "@/components/ui/progress"
 import { ContactForm } from "./components/ContactForm"
 import { Navigation } from "./components/Navigation"
+import { DynamicContent } from "./components/DynamicContent"
 
 // Animation variants
 const fadeIn = {
@@ -34,34 +25,20 @@ const fadeIn = {
   }
 }
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1
-    }
-  }
-}
-
-// Gradient background style
-const gradientBg = "bg-gradient-to-r from-primary/30 via-primary/10 to-background"
-
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Navigation />
       <main className="flex-1">
-        <section className={`w-full py-12 md:py-24 lg:py-32 bg-white`}>
+        <section className={`w-full py-16 md:py-24 lg:py-32 bg-white`}>
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <motion.div 
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeIn}
-                className="space-y-4"
+                className="space-y-6"
               >
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gradient">
                   Intelligent People Counting & Occupancy Management
@@ -70,7 +47,7 @@ export default function Page() {
                   Empower your business with real-time occupancy data and analytics. Make informed decisions, optimize
                   space utilization, and enhance operational efficiency.
                 </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-4 min-[400px]:flex-row">
                   <Button 
                     size="lg" 
                     className="bg-primary/20 hover:bg-primary/30 transition-all duration-300 shadow-lg cursor-not-allowed"
@@ -104,7 +81,7 @@ export default function Page() {
                     <div className="absolute inset-0 bg-[url('/dashboard-preview.svg')] bg-cover bg-center opacity-90" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-2">
+                      <div className="text-center space-y-4">
                         <motion.div
                           animate={{ 
                             y: [0, -10, 0],
@@ -128,207 +105,48 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="solutions" className="w-full py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+        <section id="solutions" className="w-full py-16 md:py-24 lg:py-32 bg-white">
           <div className="container px-4 sm:px-6 md:px-8">
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeIn}
-              className="flex flex-col items-center justify-center space-y-4 sm:space-y-6 text-center mb-8 sm:mb-12 md:mb-16"
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
             >
-              <div className="space-y-2 sm:space-y-3">
+              <div className="space-y-4">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Solutions
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
                   Solutions for Every Occupancy Need
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground text-sm sm:text-base md:text-lg">
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
                   Discover how our solutions can help you manage occupancy effectively.
                 </p>
               </div>
             </motion.div>
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="mx-auto grid gap-4 sm:gap-6 md:gap-8 py-4 sm:py-6 md:py-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3"
-            >
-              <div id="people-counting" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
-                    <Users className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">People Counting Solution</h3>
-                </div>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
-                  Accurate and real-time people counting technology to track foot traffic and occupancy levels across your facilities.
-                </p>
-                <ul className="grid gap-2 sm:gap-3">
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Real-time counting accuracy</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Multiple counting zones</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Historical data analysis</span>
-                  </li>
-                </ul>
-              </div>
-              <div id="occupancy" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
-                    <Building2 className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Occupancy Solution</h3>
-                </div>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
-                  Comprehensive occupancy management system to optimize space utilization and ensure compliance with capacity limits.
-                </p>
-                <ul className="grid gap-2 sm:gap-3">
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Capacity monitoring</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Automated alerts</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Compliance reporting</span>
-                  </li>
-                </ul>
-              </div>
-              <div id="corporate" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
-                    <Building className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Corporate Offices</h3>
-                </div>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
-                  Optimize workspace utilization, manage meeting room occupancy, and support hybrid work models with
-                  real-time occupancy data.
-                </p>
-                <ul className="grid gap-2 sm:gap-3">
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Workspace optimization</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Meeting room management</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Hybrid work support</span>
-                  </li>
-                </ul>
-              </div>
-              <div id="retail" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
-                    <ShoppingBag className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Retail & Shopping</h3>
-                </div>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
-                  Enhance customer experience and optimize store operations with real-time foot traffic analytics and
-                  occupancy monitoring.
-                </p>
-                <ul className="grid gap-2 sm:gap-3">
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Customer flow analysis</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Store optimization</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Queue management</span>
-                  </li>
-                </ul>
-              </div>
-              <div id="healthcare" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
-                    <Stethoscope className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Healthcare</h3>
-                </div>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
-                  Manage patient flow, optimize waiting areas, and ensure compliance with healthcare facility
-                  occupancy requirements.
-                </p>
-                <ul className="grid gap-2 sm:gap-3">
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Patient flow tracking</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Waiting area optimization</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Healthcare compliance</span>
-                  </li>
-                </ul>
-              </div>
-              <div id="education" className="rounded-xl border bg-background p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="rounded-full bg-primary/10 p-2 sm:p-3">
-                    <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">Education</h3>
-                </div>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 flex-grow">
-                  Monitor classroom occupancy, manage campus facilities, and ensure optimal learning environments with
-                  real-time data.
-                </p>
-                <ul className="grid gap-2 sm:gap-3">
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Classroom monitoring</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Campus facility management</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>Learning environment optimization</span>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
+            <DynamicContent />
           </div>
         </section>
 
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-white">
           <div className="container px-4 md:px-6">
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeIn}
-              className="flex flex-col items-center justify-center space-y-4 text-center"
+              className="flex flex-col items-center justify-center space-y-6 text-center mb-12 md:mb-16 lg:mb-20"
             >
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Contact Us
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Transform Your Occupancy Management?</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+                  Ready to Transform Your Occupancy Management?
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground text-base md:text-lg">
                   Get in touch with our team to schedule a personalized demo and consultation.
                 </p>
               </div>
