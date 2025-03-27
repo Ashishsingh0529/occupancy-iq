@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Building2, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useRef, useEffect } from "react"
-import Image from "next/image"
 
 const solutions = [
   {
@@ -85,14 +84,8 @@ export function Navigation() {
     >
       <div className="container flex h-16 items-center justify-between mx-auto max-w-7xl">
         <Link href="/" className="flex items-center" aria-label="OPTURA Home">
-          <Image
-            src="/optura-logo.svg"
-            alt="OPTURA Logo"
-            width={120}
-            height={40}
-            className="h-10 w-auto"
-            priority
-          />
+          <Building2 className="h-6 w-6 text-blue-600" />
+          <span className="ml-2 text-xl font-bold">OPTURA</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link 
