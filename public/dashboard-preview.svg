@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1A1A1A"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="#2D2D2D"/>
+  <text x="20" y="40" fill="#FFFFFF" font-family="Arial" font-size="20">OccupancyIQ Dashboard</text>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="60" width="200" height="540" fill="#2D2D2D"/>
+  
+  <!-- Main Content Area -->
+  <rect x="220" y="80" width="560" height="260" fill="#3D3D3D" rx="10"/>
+  <rect x="220" y="360" width="270" height="260" fill="#3D3D3D" rx="10"/>
+  <rect x="510" y="360" width="270" height="260" fill="#3D3D3D" rx="10"/>
+  
+  <!-- Charts and Graphs -->
+  <!-- Line Chart -->
+  <path d="M240 300 L300 200 L360 250 L420 150 L480 280 L540 180 L600 220" stroke="#4CAF50" stroke-width="2" fill="none"/>
+  
+  <!-- Bar Chart -->
+  <rect x="240" y="400" width="40" height="100" fill="#2196F3"/>
+  <rect x="300" y="400" width="40" height="150" fill="#FFC107"/>
+  <rect x="360" y="400" width="40" height="80" fill="#F44336"/>
+  
+  <!-- Pie Chart -->
+  <path d="M540 400 A100 100 0 0 1 540 300" fill="#9C27B0"/>
+  <path d="M540 400 A100 100 0 0 1 640 400" fill="#FF9800"/>
+  <path d="M540 400 A100 100 0 0 1 540 500" fill="#00BCD4"/>
+  
+  <!-- Stats Cards -->
+  <rect x="240" y="100" width="160" height="80" fill="#4CAF50" rx="5"/>
+  <rect x="420" y="100" width="160" height="80" fill="#2196F3" rx="5"/>
+  <rect x="600" y="100" width="160" height="80" fill="#FFC107" rx="5"/>
+  
+  <!-- Text Labels -->
+  <text x="260" y="140" fill="#FFFFFF" font-family="Arial" font-size="14">Total Occupancy</text>
+  <text x="440" y="140" fill="#FFFFFF" font-family="Arial" font-size="14">Peak Hours</text>
+  <text x="620" y="140" fill="#FFFFFF" font-family="Arial" font-size="14">Utilization Rate</text>
+  
+  <!-- Navigation Items -->
+  <rect x="20" y="80" width="160" height="40" fill="#4CAF50" rx="5"/>
+  <rect x="20" y="140" width="160" height="40" fill="#3D3D3D" rx="5"/>
+  <rect x="20" y="200" width="160" height="40" fill="#3D3D3D" rx="5"/>
+  <rect x="20" y="260" width="160" height="40" fill="#3D3D3D" rx="5"/>
+  
+  <!-- Navigation Text -->
+  <text x="40" y="105" fill="#FFFFFF" font-family="Arial" font-size="14">Dashboard</text>
+  <text x="40" y="165" fill="#FFFFFF" font-family="Arial" font-size="14">Analytics</text>
+  <text x="40" y="225" fill="#FFFFFF" font-family="Arial" font-size="14">Reports</text>
+  <text x="40" y="285" fill="#FFFFFF" font-family="Arial" font-size="14">Settings</text>
+</svg> 
